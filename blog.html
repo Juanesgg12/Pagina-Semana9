@@ -1,39 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" href="img/icono-cesde.png" type="image/x-icon" sizes="192x192">
-    <link rel="stylesheet" href="css/blog.css">
+    <title>Blog - Edu Tech CESDE</title>
+    <link rel="icon" href="img/icono-cesde.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-oBw9BlrY6aDTVVh6Cxu7XpJS0eY6vMJyC7A4Tujq+zJCIrKnblh6fXG95ECVbpAk6Tx8+uKJ8UGd47/3y+UJ1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .fadeIn {
+        animation: fadeIn 1.2s ease forwards;
+      }
+      .fadeInUp {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 1s ease forwards;
+      }
+      ::-webkit-scrollbar {
+        height: 10px;
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #ffe4ec;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ee237b;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #d81b60;
+      }
+    </style>
 </head>
-<body>
-    <nav>
-        <ul>
-            <li>
-                <a href="index.html">Inicio</a>
-            </li>
-            <li>
-                <a href="servicios.html">Servicios</a>
-            </li>
-            <li>
-                <a href="blog.html">Blog</a>
-            </li>
-            <li>
-                <a href="Contacto.html">Contacto</a>
-            </li>
-            <li>
-                <a href="ubicacion.html">Ubicación</a>
-            </li>
-        </ul>
-        <button class="login-btn" onclick=" location.href='./login.html'">Iniciar Sesión</button>
-    </nav>
-    <section class="blog">
-    <h1>Blog<h1>
-    <div class="blog-img"> </div>
-    <p>Accede a contenido exclusivo sobre tecnología, educación y más. Inicia sesión para ver las publicaciones.</p>
-        <footer>
-            <p>© 2023 CESDE - Todos los derechos reservados.</p>
-        </footer>
+<body class="bg-gradient-to-br from-pink-100 to-pink-300 text-black font-sans leading-relaxed overflow-x-hidden">
+    <header class="bg-gradient-to-r from-pink-600 to-pink-400 p-4 md:px-8 shadow-lg sticky top-0 z-50">
+        <nav class="flex flex-wrap justify-center items-center gap-12">
+            <div class="logo transform hover:rotate-3 transition-transform duration-300">
+                <img src="img/logo-cesde-blanco-sin-fondov2.png" alt="Logo CESDE" class="h-12" />
+            </div>
+            <ul class="flex gap-8 items-center list-none">
+                <li><a href="index.html" title="Inicio" class="text-black text-xl relative hover:scale-125 transition-all duration-300 hover:text-white hover:-translate-y-1">Inicio</a></li>
+                <li><a href="servicios.html" title="Servicios" class="text-black text-xl relative hover:scale-125 transition-all duration-300 hover:text-white hover:-translate-y-1">Servicios</a></li>
+                <li><a href="blog.html" title="Blog" class="text-black text-xl relative hover:scale-125 transition-all duration-300 hover:text-white hover:-translate-y-1">Blog</a></li>
+                <li><a href="contacto.html" title="Contacto" class="text-black text-xl relative hover:scale-125 transition-all duration-300 hover:text-white hover:-translate-y-1">Contacto</a></li>
+                <li><a href="ubicacion.html" title="Ubicación" class="text-black text-xl relative hover:scale-125 transition-all duration-300 hover:text-white hover:-translate-y-1">Ubicación</a></li>
+            </ul>
+            <button onclick="location.href='login.html'" class="bg-lime-400 text-black font-bold px-4 py-2 rounded-lg transform hover:scale-105 hover:shadow-lg transition-all duration-300 hover:bg-lime-500 hover:-translate-y-1 active:translate-y-0 active:scale-95">Iniciar Sesión</button>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="bg-white p-10 my-8 rounded-2xl shadow-2xl text-center fadeIn">
+            <h1 class="text-3xl font-bold mb-6">Blog de Préstamo de Computadores</h1>
+            <p class="text-lg">Mantente informado sobre nuestros servicios, novedades y consejos para el uso de equipos.</p>
+        </section>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="bg-white p-6 rounded-xl shadow-xl fadeInUp hover:shadow-2xl transition-shadow duration-300">
+                <h2 class="text-2xl font-semibold mb-4">Guía de Préstamo</h2>
+                <div class="mb-4">
+                    <img src="img/desarrollo-software-cesde.jpg" alt="Guía de préstamo" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <p class="text-gray-600 mb-4">Aprende todo sobre el proceso de préstamo de equipos y los requisitos necesarios.</p>
+                    <a href="#" class="text-pink-600 hover:text-pink-800 font-medium">Leer más →</a>
+                </div>
+            </article>
+
+            <article class="bg-white p-6 rounded-xl shadow-xl fadeInUp hover:shadow-2xl transition-shadow duration-300" style="animation-delay: 0.2s;">
+                <h2 class="text-2xl font-semibold mb-4">Cuidado de Equipos</h2>
+                <div class="mb-4">
+                    <img src="img/herramientas-ofimaticas.jpg" alt="Cuidado de equipos" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <p class="text-gray-600 mb-4">Consejos importantes para mantener los equipos en óptimas condiciones.</p>
+                    <a href="#" class="text-pink-600 hover:text-pink-800 font-medium">Leer más →</a>
+                </div>
+            </article>
+
+            <article class="bg-white p-6 rounded-xl shadow-xl fadeInUp hover:shadow-2xl transition-shadow duration-300" style="animation-delay: 0.4s;">
+                <h2 class="text-2xl font-semibold mb-4">Nuevos Equipos</h2>
+                <div class="mb-4">
+                    <img src="img/Diseno-grafico-cesde.jpg" alt="Nuevos equipos" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <p class="text-gray-600 mb-4">Conoce los nuevos equipos disponibles para préstamo en nuestra institución.</p>
+                    <a href="#" class="text-pink-600 hover:text-pink-800 font-medium">Leer más →</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="text-center bg-gradient-to-r from-pink-600 to-pink-400 text-black py-5 mt-8 font-medium shadow-[0_-4px_10px_rgba(0,0,0,0.2)]">
+        <p>© 2023 CESDE - Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

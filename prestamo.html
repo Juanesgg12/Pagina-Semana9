@@ -39,20 +39,21 @@
 <body class="bg-gradient-to-br from-pink-100 to-pink-200 min-h-screen font-sans text-gray-800 flex flex-col">
 
   <!-- Header -->
-  <header class="bg-gradient-to-r from-pink-600 to-pink-500 p-4 shadow-md sticky top-0 z-50">
-    <nav class="max-w-6xl mx-auto flex items-center justify-between">
-      <div class="logo">
-        <img src="img/logo-cesde-blanco-sin-fondov2.png" alt="Logo CESDE" class="h-12"/>
-      </div>
-      <ul class="flex gap-6 text-white font-medium text-lg">
-        <li><a href="index.html" class="hover:text-gray-100">Inicio</a></li>
-        <li><a href="servicios.html" class="hover:text-gray-100">Servicios</a></li>
-        <li><a href="blog.html" class="hover:text-gray-100">Blog</a></li>
-        <li><a href="contacto.html" class="hover:text-gray-100">Contacto</a></li>
-        <li><a href="ubicacion.html" class="hover:text-gray-100">Ubicación</a></li>
-      </ul>
+  <header class="bg-gradient-to-r from-pink-600 to-pink-400 p-4 md:px-8 shadow-lg sticky top-0 z-50">
+    <nav class="flex flex-wrap justify-center items-center gap-12">
+        <div class="logo transform hover:rotate-3 transition-transform duration-300">
+            <img src="img/logo-cesde-blanco-sin-fondov2.png" alt="Logo CESDE" class="h-12" />
+        </div>
+        <ul class="flex gap-8 items-center list-none">
+            <li><a href="index.html" title="Inicio" class="text-black text-xl relative hover:scale-125 transition-all duration-300 hover:text-white hover:-translate-y-1">Inicio</a></li>
+            <li><a href="servicios.html" title="Servicios" class="text-black text-xl relative hover:scale-125 transition-all duration-300 hover:text-white hover:-translate-y-1">Servicios</a></li>
+            <li><a href="blog.html" title="Blog" class="text-black text-xl relative hover:scale-125 transition-all duration-300 hover:text-white hover:-translate-y-1">Blog</a></li>
+            <li><a href="contacto.html" title="Contacto" class="text-black text-xl relative hover:scale-125 transition-all duration-300 hover:text-white hover:-translate-y-1">Contacto</a></li>
+            <li><a href="ubicacion.html" title="Ubicación" class="text-black text-xl relative hover:scale-125 transition-all duration-300 hover:text-white hover:-translate-y-1">Ubicación</a></li>
+        </ul>
+        <button onclick="location.href='login.html'" class="bg-lime-400 text-black font-bold px-4 py-2 rounded-lg transform hover:scale-105 hover:shadow-lg transition-all duration-300 hover:bg-lime-500 hover:-translate-y-1 active:translate-y-0 active:scale-95">Iniciar Sesión</button>
     </nav>
-  </header>
+</header>
 
   <!-- Formulario -->
   <main class="flex-grow flex items-center justify-center px-4 py-10">
