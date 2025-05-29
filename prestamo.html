@@ -1,65 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/icono-cesde.png" type="image/x-icon" sizes="192x192">
-    <link rel="stylesheet" href="css/prestamo.css">
-    <title>Ubicacion</title>
-</head>
-<body>
-    <header> 
-        <nav>
-            <div class="logo">
-                <img src="img/logo-cesde-blanco-sin-fondov2.png"> 
-            </div>
-            <ul> 
-              <li> 
-                <a href="index.html"> Inicio </a>
-              </li>
-              <li>
-                <a href="servicios.html"> Servicios</a>
-              </li>
-              <li>
-                <a href="blog.html">Blog </a>
-              </li>
-              <li>
-                <a href="contacto.html">Contacto</a>
-              </li>
-              <li>
-                <a href="ubicacion.html">Ubicacion</a>
-              </li>
-            </ul>
-        </nav>
-    </header>
-   <section class="solicitudPrestamo">
-        <h1> Solicitud de Prestamo De Equipos</h1>
-        <form action="" method="POST">
-            <label for="nombreCompleto">Nombre Completo:</label>
-            <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Escribe tu nombre completo" required>
-            <br></br>
-            <label for="documento"> Numero De Documento:</label>
-            <input type="text" id="documento" name="documento" placeholder="Escribe tu numero de documento" required>
-            <br></br>
-            <label for="tipoEquipo"> Tipo de Equipo:</label>
-            <select id="tipoEquipo" name="tipoEquipo" required>
-                <option value="desarrollo">Desarrollo de software</option>
-                <option value="diseño">Diseño Grafico</option>
-                <option value="ofimatica"> Herramientas Ofimaticas</option>
-            </select>
-            <br></br>
-            <label for="fechaPrestamo"> Fecha de Prestamo:</label>
-            <input type="date" id="fechaPrestamo" name="fechaPrestamo" required>
-            <br></br>
-            <label for="horaPrestamo"> Hora Prestamo:</label>
-            <input type="datetime" id="horaPrestamo" name="horaPrestamo" required>
-            <br></br>
-        </form>
-        <button class="solicitudPrestamo" type="submit">Solicitar Prestamo</button>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solicitud de Préstamo - Edu Tech CESDE</title>
+  <link rel="icon" href="img/icono-cesde.png" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-   </section>
-    <footer>
-        <p>© 2023 CESDE - Todos los derechos reservados.</p>
-    </footer>
+    .fadeInUp {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #ec4899;
+      border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #ffe4ec;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-pink-100 to-pink-200 min-h-screen font-sans text-gray-800 flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-pink-600 to-pink-500 p-4 shadow-md sticky top-0 z-50">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between">
+      <div class="logo">
+        <img src="img/logo-cesde-blanco-sin-fondov2.png" alt="Logo CESDE" class="h-12"/>
+      </div>
+      <ul class="flex gap-6 text-white font-medium text-lg">
+        <li><a href="index.html" class="hover:text-gray-100">Inicio</a></li>
+        <li><a href="servicios.html" class="hover:text-gray-100">Servicios</a></li>
+        <li><a href="blog.html" class="hover:text-gray-100">Blog</a></li>
+        <li><a href="contacto.html" class="hover:text-gray-100">Contacto</a></li>
+        <li><a href="ubicacion.html" class="hover:text-gray-100">Ubicación</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Formulario -->
+  <main class="flex-grow flex items-center justify-center px-4 py-10">
+    <section class="w-full max-w-3xl bg-white rounded-2xl shadow-2xl p-8 fadeInUp">
+      <h1 class="text-3xl md:text-4xl font-bold text-pink-600 mb-8 text-center">Solicitud de Préstamo de Equipos</h1>
+      <form action="#" method="POST" class="space-y-6">
+        
+        <div>
+          <label for="nombreCompleto" class="block text-gray-700 font-semibold">Nombre Completo</label>
+          <input type="text" id="nombreCompleto" name="nombreCompleto" required
+            placeholder="Escribe tu nombre completo"
+            class="w-full px-4 py-2 mt-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-400 transition duration-300" />
+        </div>
+
+        <div>
+          <label for="documento" class="block text-gray-700 font-semibold">Número de Documento</label>
+          <input type="text" id="documento" name="documento" required
+            placeholder="Escribe tu número de documento"
+            class="w-full px-4 py-2 mt-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-400 transition duration-300" />
+        </div>
+
+        <div>
+          <label for="tipoEquipo" class="block text-gray-700 font-semibold">Tipo de Equipo</label>
+          <select id="tipoEquipo" name="tipoEquipo" required
+            class="w-full px-4 py-2 mt-2 border rounded-lg shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-pink-400 transition duration-300">
+            <option value="">Selecciona una opción</option>
+            <option value="desarrollo">Desarrollo de Software</option>
+            <option value="diseño">Diseño Gráfico</option>
+            <option value="ofimatica">Herramientas Ofimáticas</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="fechaPrestamo" class="block text-gray-700 font-semibold">Fecha de Préstamo</label>
+          <input type="date" id="fechaPrestamo" name="fechaPrestamo" required
+            class="w-full px-4 py-2 mt-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-400 transition duration-300" />
+        </div>
+
+        <div>
+          <label for="horaPrestamo" class="block text-gray-700 font-semibold">Hora del Préstamo</label>
+          <input type="time" id="horaPrestamo" name="horaPrestamo" required
+            class="w-full px-4 py-2 mt-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-400 transition duration-300" />
+        </div>
+
+        <div class="text-center">
+          <button type="submit"
+            class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-6 py-3 rounded-lg shadow-md hover:scale-105 active:scale-95 transition transform duration-300">
+            Solicitar Préstamo
+          </button>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-gradient-to-r from-pink-600 to-pink-500 text-white text-center py-4 mt-8">
+    <p>© 2023 CESDE - Todos los derechos reservados.</p>
+  </footer>
+
 </body>
 </html>

@@ -1,57 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesion -CESDE</title>
-    <link rel="icon" href="img/icono-cesde.png" type="image/x-icon" sizes="192X192">
-    <link rel="stylesheet" href="css/login.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="img/logo-cesde-blanco-sin-fondov2.png" alt="Logo CESDE">
-            </div>
-            <ul>
-                <li>
-                    <a href="index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="servicios.html">Servicios</a>
-                </li>
-                <li>
-                    <a href="blog.html">Blog</a>
-                </li>
-                <li>
-                    <a href="contacto.html">Contacto</a>
-                </li>
-                <li>
-                    <a href="ubicacion.html">Ubicación</a>
-                </li>
-                <li>
-                    <a href="prestamo.html">Prestamo</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="login">
-            <h1>Inciar sesion</h1>
-            <form action="#" method="post"></form>
-                <div class="form-group">
-                    <label for="usuario">Usuario</label>
-                    <input type="text" id="usuario" name="usuario" required>
-                </div>
-                <div class="form-group">
-                    <label for="contrasena">Contraseña</label>
-                    <input type="password" id="contrasena" name="contrasena" required>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Iniciar sesion</button>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iniciar Sesión - CESDE</title>
+  <link rel="icon" href="img/icono-cesde.png" type="image/x-icon" sizes="192x192" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeSlide {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-                </div>
-        </section>
-    </main>
+    .fadeSlide {
+      animation: fadeSlide 1s ease-out forwards;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #ec4899;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-pink-100 to-pink-200 min-h-screen font-sans flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-pink-600 to-pink-500 p-4 shadow-md sticky top-0 z-50">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between">
+      <div class="logo">
+        <img src="img/logo-cesde-blanco-sin-fondov2.png" alt="Logo CESDE" class="h-12"/>
+      </div>
+      <ul class="flex gap-6 text-white font-medium text-lg">
+        <li><a href="index.html" class="hover:text-gray-100">Inicio</a></li>
+        <li><a href="servicios.html" class="hover:text-gray-100">Servicios</a></li>
+        <li><a href="blog.html" class="hover:text-gray-100">Blog</a></li>
+        <li><a href="contacto.html" class="hover:text-gray-100">Contacto</a></li>
+        <li><a href="ubicacion.html" class="hover:text-gray-100">Ubicación</a></li>
+        <li><a href="prestamo.html" class="hover:text-gray-100">Préstamo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Formulario de login -->
+  <main class="flex-grow flex items-center justify-center px-4 py-12">
+    <section class="bg-white w-full max-w-md p-8 rounded-2xl shadow-2xl fadeSlide">
+      <h1 class="text-3xl font-bold text-center text-pink-600 mb-8">Iniciar Sesión</h1>
+      <form action="#" method="post" class="space-y-6">
+
+        <div>
+          <label for="usuario" class="block text-gray-700 font-semibold">Usuario</label>
+          <input type="text" id="usuario" name="usuario" required
+            class="w-full mt-2 px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-400 transition duration-300"
+            placeholder="Ingresa tu usuario" />
+        </div>
+
+        <div>
+          <label for="contrasena" class="block text-gray-700 font-semibold">Contraseña</label>
+          <input type="password" id="contrasena" name="contrasena" required
+            class="w-full mt-2 px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-400 transition duration-300"
+            placeholder="Ingresa tu contraseña" />
+        </div>
+
+        <div class="text-center pt-4">
+          <button type="submit"
+            class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-6 py-3 rounded-lg shadow-md hover:scale-105 active:scale-95 transition transform duration-300">
+            Iniciar Sesión
+          </button>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
 </body>
 </html>

@@ -1,72 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Edu Tech CESDE</title>
-    <link rel="icon" href="img/icono-cesde.png" type="image/x-icon" sizes="192x192">
-    <link rel="stylesheet" href="css/contacto.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Edu Tech CESDE</title>
+  <link rel="icon" href="img/icono-cesde.png" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fadeInUp {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #ffe4ec;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #ee237b;
+      border-radius: 8px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #d81b60;
+    }
+  </style>
 </head>
+<body class="bg-gradient-to-br from-pink-100 to-pink-300 text-black font-sans min-h-screen flex flex-col">
 
-<body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="img/logo-cesde-blanco-sin-fondov2.png" alt="Logo CESDE">
-            </div>
-            <ul>
-                <li>
-                    <a href="index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="servicios.html">Servicios</a>
-                </li>
-                <li>
-                    <a href="blog.html">Blog</a>
-                </li>
-                <li>
-                    <a href="contacto.html">Contacto</a>
-                </li>
-                <li>
-                    <a href="ubicacion.html">Ubicación</a>
-                </li>
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-pink-600 to-pink-400 p-4 shadow-lg sticky top-0 z-50">
+    <nav class="flex flex-wrap justify-between items-center max-w-6xl mx-auto px-4">
+      <div class="logo">
+        <img src="img/logo-cesde-blanco-sin-fondov2.png" alt="Logo CESDE" class="h-12" />
+      </div>
+      <ul class="flex flex-wrap gap-6 items-center text-lg font-medium">
+        <li><a href="index.html" class="hover:text-white transition">Inicio</a></li>
+        <li><a href="servicios.html" class="hover:text-white transition">Servicios</a></li>
+        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+        <li><a href="contacto.html" class="hover:text-white transition">Contacto</a></li>
+        <li><a href="ubicacion.html" class="hover:text-white transition">Ubicación</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            </ul>
-        </nav>
-    </header>
-    <main>
-       <div class="contacto-contenedor"> 
-        <section class="contacto-text">
-            <h1>Contacto</h1>
-            <p>
-                Para más información o soporte, contactar al área de sistemas de la institución CESDE:
-                
-            </p>
-            <ul>
-                <li>
-                    <strong>Correo electronico</strong>
-                    : Sistemas@cesde.edu
-                </li>
-                <li>
-                    <strong>Teléfono</strong>
-                    : [Numero CESDE sistemas]
-                </li>
-                <li>
-                    <strong>Oficina</strong>
-                    : [Ubicacion de la oficina de sistemas]
-                    
-                </li>
-            </ul>
-        </section>
-        <section class="contacto-img">
-            <img src="img/Contacto-cesde.jpg" alt="Contacto"> 
-        </section>
-        </div>
-    </main>
-    <footer style="position: fixed; bottom: 0;width: 100;">
-        <p>© 2023 CESDE - Todos los derechos reservados.</p>
-    </footer>
+  <!-- Main -->
+  <main class="flex-grow">
+    <div class="flex flex-col-reverse md:flex-row items-center justify-center px-6 py-16 max-w-7xl mx-auto gap-12">
+      
+      <!-- Texto de contacto -->
+      <section class="md:w-1/2 fadeInUp">
+        <h1 class="text-4xl font-bold mb-6 text-pink-700">Contacto</h1>
+        <p class="text-lg mb-4">
+          Para más información o soporte, contactar al área de sistemas de la institución CESDE:
+        </p>
+        <ul class="space-y-4 text-base">
+          <li>
+            <strong>Correo electrónico:</strong>
+            <a href="mailto:comunicaciones@cesde.edu.co" class="text-blue-600 hover:underline">comunicaciones@cesde.edu.co</a>
+          </li>
+          <li>
+            <strong>Teléfono:</strong> (60)(4) 4808822
+          </li>
+          <li>
+            <strong>Oficina:</strong> Calle 49 41 - 9.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Imagen de contacto -->
+      <section class="md:w-1/2 fadeInUp">
+        <img src="img/Contacto-cesde.jpg" alt="Contacto" class="rounded-xl shadow-2xl w-full h-auto object-cover hover:scale-105 transition duration-500" />
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-pink-600 to-pink-400 text-center text-black py-4 shadow-[0_-2px_10px_rgba(0,0,0,0.2)]">
+    <p>© 2023 CESDE - Todos los derechos reservados.</p>
+  </footer>
 </body>
-
 </html>
